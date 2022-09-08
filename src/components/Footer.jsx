@@ -8,14 +8,19 @@ function Footer() {
 					© OpenBootCamp - Open WeekApps - 2022
 				</span>
 				<div className='flex flex-row justify-center gap-4 pt-3'>
+					<a href='https://www.instagram.com/openbootcamp_/' target='_blank'>
+						<FaInstagram className='hover:text-teal-900' />
+					</a>
+				</div>
+				<div className='flex flex-row justify-center gap-4 pt-3'>
 					<a href='https://www.instagram.com/openbootcamp_/'>
 						<FaInstagram />
 					</a>
-					<a href='https://twitter.com/open_bootcamp'>
-						<FaTwitter />
+					<a href='https://twitter.com/open_bootcamp' target='_blank'>
+						<FaTwitter className='hover:text-teal-900' />
 					</a>
-					<a href='https://www.twitch.tv/openbootcamp'>
-						<FaTwitch />
+					<a href='https://www.twitch.tv/openbootcamp' target='_blank'>
+						<FaTwitch className='hover:text-teal-900' />
 					</a>
 				</div>
 			</div>
