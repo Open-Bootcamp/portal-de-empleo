@@ -7,20 +7,15 @@ function Footer() {
 				<span className=' text-sm md:text-lg'>
 					© OpenBootCamp - Open WeekApps - 2022
 				</span>
-				<div className='flex flex-row justify-center gap-4 pt-3'>
+				<div className='flex flex-row items-center justify-center gap-4 pt-3'>
 					<a href='https://www.instagram.com/openbootcamp_/' target='_blank'>
-						<FaInstagram className='hover:text-teal-900' />
-					</a>
-				</div>
-				<div className='flex flex-row justify-center gap-4 pt-3'>
-					<a href='https://www.instagram.com/openbootcamp_/'>
-						<FaInstagram />
+						<FaInstagram className='transition:colors duration-300 hover:text-teal-900' />
 					</a>
 					<a href='https://twitter.com/open_bootcamp' target='_blank'>
-						<FaTwitter className='hover:text-teal-900' />
+						<FaTwitter className='transition:colors duration-300 hover:text-teal-900' />
 					</a>
 					<a href='https://www.twitch.tv/openbootcamp' target='_blank'>
-						<FaTwitch className='hover:text-teal-900' />
+						<FaTwitch className='transition:colors duration-300 hover:text-teal-900' />
 					</a>
 				</div>
 			</div>
