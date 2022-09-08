@@ -2,14 +2,19 @@ import { FaInstagram, FaTwitch, FaTwitter } from 'react-icons/fa'
 
 function Footer() {
 	return (
-		<div className='bg-dark-cyan h-24 text-[#FFFFFF] text-lg text-center p-3 drop-shadow-[0_-4px_4px_rgba(0,0,0,0.20)]'>
+		<div className='h-24 bg-dark-cyan p-3 text-center text-lg text-[#FFFFFF] drop-shadow-[0_-4px_4px_rgba(0,0,0,0.20)]'>
 			<div className='text-center'>
 				<span className=' text-sm md:text-lg'>
 					© OpenBootCamp - Open WeekApps - 2022
 				</span>
-				<div className='flex flex-row gap-4 justify-center pt-3'>
+				<div className='flex flex-row justify-center gap-4 pt-3'>
 					<a href='https://www.instagram.com/openbootcamp_/' target='_blank'>
 						<FaInstagram className='hover:text-teal-900' />
+					</a>
+				</div>
+				<div className='flex flex-row justify-center gap-4 pt-3'>
+					<a href='https://www.instagram.com/openbootcamp_/'>
+						<FaInstagram />
 					</a>
 					<a href='https://twitter.com/open_bootcamp' target='_blank'>
 						<FaTwitter className='hover:text-teal-900' />
