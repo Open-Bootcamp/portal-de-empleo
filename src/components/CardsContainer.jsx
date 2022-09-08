@@ -10,7 +10,7 @@ function CardsContainer() {
 	}, [])
 
 	return (
-		<main className='bg-light-grayish-cyan-bg text-center min-h-screen flex flex-col gap-10 p-5 py-10'>
+		<main className='flex min-h-screen flex-col gap-10 bg-light-grayish-cyan-bg p-5 py-10 text-center'>
 			<Card jobs={jobs} />
 		</main>
 	)
