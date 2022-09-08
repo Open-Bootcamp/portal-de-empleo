@@ -1,4 +1,5 @@
 import CardsContainer from './components/CardsContainer'
+import Footer from './components/Footer'
 
 function App() {
 	return (
