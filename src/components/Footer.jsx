@@ -2,7 +2,7 @@ import { FaInstagram, FaTwitch, FaTwitter } from 'react-icons/fa'
 
 function Footer() {
 	return (
-		<div className='bg-dark-cyan h-24 text-[#FFFFFF] text-lg text-center p-3'>
+		<div className='bg-dark-cyan h-24 text-[#FFFFFF] text-lg text-center p-3 drop-shadow-[0_-4px_4px_rgba(0,0,0,0.20)]'>
 			<div className='text-center'>
 				<span className=' text-sm md:text-lg'>
 					© OpenBootCamp - Open WeekApps - 2022
