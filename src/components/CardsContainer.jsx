@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import data from '../data/data.json'
 import Card from './Card'
-import Navbar from './Navbar'
+
 
 function CardsContainer() {
 	const [jobs, setJobs] = useState([])
