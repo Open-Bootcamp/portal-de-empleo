@@ -4,7 +4,7 @@ module.exports = {
 	theme: {
 		extend: {
 			gridTemplateRows: {
-				layout: '90px 1fr 90px',
+				layout: '110px 1fr 90px',
 			},
 			colors: {
 				'dark-cyan': '#5ba4a4',
