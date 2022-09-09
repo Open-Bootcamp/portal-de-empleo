@@ -1,11 +1,15 @@
-import Header from "./components/Header"
+import CardsContainer from './components/CardsContainer'
+import Footer from './components/Footer'
+import Header from './components/Header'
 
 function App() {
-	return <div className='App text-xl grid grid-rows-layout'>
-		<Header></Header>
-		<main className='bg-light-grayish-cyan-bg text-center min-h-screen'></main>
-		<footer></footer>
-	</div>
+	return (
+		<div className='App grid grid-rows-layout text-xl'>
+			<Header />
+			<CardsContainer />
+			<Footer />
+		</div>
+	)
 }
 
 export default App
