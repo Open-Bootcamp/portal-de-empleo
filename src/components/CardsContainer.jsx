@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import data from '../data/data.json'
 import Card from './Card'
+import Navbar from './Navbar'
 
 function CardsContainer() {
 	const [jobs, setJobs] = useState([])
@@ -31,6 +32,10 @@ function CardsContainer() {
 
 	return (
 		<main className='flex min-h-screen flex-col gap-10 bg-light-grayish-cyan-bg p-5 py-10 text-center'>
+			{filters.length > 0 && (
+				<Navbar filters={filters} setFilters={setFilters} />
+			)}
+
 			{filteredJobs.map(job => (
 				<Card key={job.id} job={job} handleTagClick={handleTagClick} />
 			))}
