@@ -3,7 +3,7 @@ function CardTags({ job, handleTagClick }) {
 	tags.push(...job.languages, ...job.tools)
 
 	return (
-		<div className='mt-4 mb-2 flex flex-wrap gap-3'>
+		<div className='mt-4 mb-2 flex flex-wrap gap-3 lg:self-center lg:mr-5'>
 			{tags.map(tag => (
 				<span
 					onClick={() => handleTagClick(tag)}
