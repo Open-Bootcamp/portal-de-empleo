@@ -1,11 +1,14 @@
-function CardTags({ job }) {
+function CardTags({ job, handleTagClick }) {
 	const tags = [job.role, job.level]
 	tags.push(...job.languages, ...job.tools)
 
 	return (
 		<div className='mt-4 mb-2 flex flex-wrap gap-3'>
 			{tags.map(tag => (
-				<span className='cursor-pointer rounded-sm bg-light-grayish-cyan-ft px-2 py-1 text-sm font-bold text-dark-cyan'>
+				<span
+					onClick={() => handleTagClick(tag)}
+					className='cursor-pointer rounded-sm bg-light-grayish-cyan-ft px-2 py-1 text-sm font-bold text-dark-cyan'
+				>
 					{tag}
 				</span>
 			))}
