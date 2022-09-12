@@ -16,7 +16,7 @@ function CardTags({ job, handleTagClick }) {
 				<span
 					key={uuidv4()}
 					onClick={() => handleTagClick(tag)}
-					className='cursor-pointer rounded-sm bg-light-grayish-cyan-ft px-2 py-1 text-sm font-bold text-dark-cyan'
+					className='cursor-pointer rounded-sm bg-light-grayish-cyan-ft px-2 py-1 text-sm font-bold text-dark-cyan transition-colors duration-300 hover:bg-dark-cyan hover:text-light-grayish-cyan-ft'
 				>
 					{tag}
 				</span>

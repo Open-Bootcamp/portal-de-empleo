@@ -6,7 +6,7 @@ import Header from './components/Header'
 
 function App() {
 	return (
-		<div className='App grid grid-rows-layout text-xl'>
+		<div className='App grid min-h-screen grid-rows-layout text-xl'>
 			<Header />
 			<Routes>
 				<Route path='/' element={<CardsContainer />} />
