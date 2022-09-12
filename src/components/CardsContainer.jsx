@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import data from '../data/data.json'
+import * as API from '../data/getJobs'
 import Card from './Card'
 import Navbar from './Navbar'
 
@@ -8,7 +8,9 @@ function CardsContainer() {
 	const [filters, setFilters] = useState([])
 
 	useEffect(() => {
-		setJobs(data)
+		API.getAllJobs()
+			.then(setJobs)
+			.catch(error => console.error(error))
 	}, [])
 
 	const filterFunction = ({ role, level, tools, languages }) => {
