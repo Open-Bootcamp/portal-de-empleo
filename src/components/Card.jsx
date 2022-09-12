@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import CardTags from './CardTags'
 
 function Card({ job, handleTagClick }) {
@@ -25,7 +26,11 @@ function Card({ job, handleTagClick }) {
 						</p>
 					)}
 				</div>
-				<p className='text-lg font-bold lg:text-xl'>{job.position}</p>
+				<Link to={`job/${job.idOffer}`}>
+					<p className='cursor-pointer text-lg font-bold hover:underline lg:text-xl'>
+						{job.position}
+					</p>
+				</Link>
 				<div className='mb-3 flex items-center gap-1 text-sm text-dark-grayish-cyan lg:text-base'>
 					<span>{job.postedAt}</span> · <span>{job.contract}</span> ·
 					<span>{job.location}</span>

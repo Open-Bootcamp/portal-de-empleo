@@ -1,7 +1,10 @@
 import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import * as API from '../data/getJobs'
 
 function Details() {
+	const { jobId } = useParams()
+
 	const [job, setJob] = useState({})
 
 	useEffect(() => {
