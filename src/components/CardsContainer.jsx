@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useAutoAnimate } from '@formkit/auto-animate/react'
 import * as API from '../data/getJobs'
 import Card from './Card'
 import Navbar from './Navbar'
@@ -6,6 +7,8 @@ import Navbar from './Navbar'
 function CardsContainer() {
 	const [jobs, setJobs] = useState([])
 	const [filters, setFilters] = useState([])
+
+	const [parent] = useAutoAnimate()
 
 	useEffect(() => {
 		API.getAllJobs()
@@ -33,13 +36,16 @@ function CardsContainer() {
 	const filteredJobs = jobs.filter(filterFunction)
 
 	return (
-		<main className='flex min-h-screen flex-col gap-10 bg-light-grayish-cyan-bg p-5 py-10 text-center'>
+		<main
+			ref={parent}
+			className='flex min-h-screen flex-col gap-10 bg-light-grayish-cyan-bg p-5 py-10 text-center'
+		>
 			{filters.length > 0 && (
 				<Navbar filters={filters} setFilters={setFilters} />
 			)}
 
 			{filteredJobs.map(job => (
-				<Card key={job.id} job={job} handleTagClick={handleTagClick} />
+				<Card key={job.idOffer} job={job} handleTagClick={handleTagClick} />
 			))}
 		</main>
 	)
