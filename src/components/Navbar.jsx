@@ -1,4 +1,8 @@
+import { useAutoAnimate } from '@formkit/auto-animate/react'
+
 function Navbar({ filters, setFilters }) {
+	const [parent] = useAutoAnimate()
+
 	const clearFilters = () => {
 		setFilters([])
 	}
@@ -9,7 +13,7 @@ function Navbar({ filters, setFilters }) {
 
 	return (
 		<div className='container mx-auto -mt-16 flex max-w-6xl rounded bg-white py-3.5 pl-6 shadow-sm sm:items-center'>
-			<div className='flex flex-wrap gap-4'>
+			<div ref={parent} className='flex w-full flex-wrap gap-4'>
 				{filters.map(filter => (
 					<div className='rounded'>
 						<span className='rounded-l bg-light-grayish-cyan-ft px-2 py-1.5 text-sm font-bold text-dark-cyan sm:text-sm'>
