@@ -3,6 +3,7 @@ import { useAutoAnimate } from '@formkit/auto-animate/react'
 import * as API from '../data/getJobs'
 import Card from './Card'
 import Navbar from './Navbar'
+import Loader from './Loader'
 
 function CardsContainer() {
 	const [jobs, setJobs] = useState([])
@@ -38,15 +39,19 @@ function CardsContainer() {
 	return (
 		<main
 			ref={parent}
-			className='flex min-h-screen flex-col gap-10 bg-light-grayish-cyan-bg p-5 py-10 text-center'
+			className='flex flex-col gap-10 bg-light-grayish-cyan-bg p-5 py-10 text-center'
 		>
 			{filters.length > 0 && (
 				<Navbar filters={filters} setFilters={setFilters} />
 			)}
 
-			{filteredJobs.map(job => (
-				<Card key={job.idOffer} job={job} handleTagClick={handleTagClick} />
-			))}
+			{filteredJobs.length === 0 ? (
+				<Loader />
+			) : (
+				filteredJobs.map(job => (
+					<Card key={job.idOffer} job={job} handleTagClick={handleTagClick} />
+				))
+			)}
 		</main>
 	)
 }
