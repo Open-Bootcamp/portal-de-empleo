@@ -26,9 +26,9 @@ Este proyecto fue realizado con la participación de los integrantes de OpenBoot
 
 ### Links
 
-- API: [API](https://job-offers-portal.vercel.app/)
+- API: [API](https://portal-de-empleo-api-production.up.railway.app/)
 - Repositorio: [Solution](https://github.com/Open-Bootcamp/portal-de-empleo)
-- Live Site URL: [Live App]()
+- Live Site URL: [Live App](https://job-offers-portal.vercel.app/)
 
 ## Proceso
 
